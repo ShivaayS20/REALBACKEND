@@ -1,5 +1,5 @@
 const asyncHandler=(requestHandler)=>{             //METHOD 1 MAINLY USE FOR PRODCUTION GRADE LEVEL
-    (req,res,next)=>{
+   return (req,res,next)=>{
         Promise.resolve(requestHandler(req,res,next)).catch((err)=>next(err))
     }
 
